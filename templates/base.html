@@ -1,0 +1,68 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django blog</title>
+    
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Django blogi</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <article>
+                
+            </article>
+            
+        </main>
+        <aside>
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="#">Post Title 1</a></li>
+                <li><a href="#">Post Title 2</a></li>
+                <li><a href="#">Post Title 3</a></li>
+            </ul>
+        </aside>
+    </div>
+    
+</body>
+</html> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django templates</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <header>
+        <div class="nav-left">
+            <h1><a href="{% url 'home' %}">Django Templates</a></h1>
+        </div>
+        <div class="nav-rigth">
+            <h2><a href="{% url 'post_new' %}">Yangi post qo'shish</a></h2>
+        </div>
+    </header>
+
+    <section>
+        {% block content %}
+            
+        {% endblock content %}
+    </section>
+
+
+</body>
+</html>
